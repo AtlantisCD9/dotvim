@@ -47,6 +47,44 @@ endif
 "set hidden		" Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 
+
+" self definition***********************************************************************************************
+" http://blog.csdn.net/namecyf/article/details/7787523
+
+" self definition
+set nu!
+colorscheme desert
+syntax enable
+syntax on
+
+" taglist.....ctags -R
+set tags=tags
+set autochdir
+
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+
+" winmanager
+let g:winManagerWindowLayout='FileExplorer|TagList'
+nmap wm :WMToggle<cr>
+
+" a.vim
+nnoremap <silent> <F12> :A<CR>
+
+" grep.vim
+nnoremap <silent> <F3> :Grep<CR>
+
+" minibufexpl
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+" let g:neocomplcache_enable_at_startup = 1
+
+" self definition***********************************************************************************************
+
+
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
