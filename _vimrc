@@ -12,6 +12,11 @@ colorscheme desert
 syntax enable
 syntax on
 
+set list
+set listchars=tab:>-,trail:-
+set ts=4
+set expandtab
+
 " taglist.....ctags -R
 set tags=tags
 set autochdir
