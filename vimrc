@@ -22,7 +22,7 @@ endif
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
-"set background=dark
+set background=dark
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -58,6 +58,8 @@ set shiftwidth=4
 "zM close all
 "zR open all
 
+set hlsearch
+
 set nu!
 colorscheme desert
 syntax enable
@@ -66,21 +68,24 @@ syntax on
 set list
 set listchars=tab:>-,trail:-
 set ts=4
-set expandtab
+" set expandtab    "just for tab -> 4 spaces
+
+" set autoindent
+set cindent "C style indent
 
 " taglist.....ctags -R
 set tags=tags
-set autochdir
+" set autochdir
 
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 
 " winmanager
 let g:winManagerWindowLayout='FileExplorer|TagList'
-nmap wm :WMToggle<cr>
+nmap wm :WMToggle<CR>
 
 " a.vim
-nnoremap <silent> <F12> :A<CR>
+nnoremap <silent> <F4> :A<CR>
 
 " grep.vim
 nnoremap <silent> <F3> :Grep<CR>
