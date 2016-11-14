@@ -18,7 +18,8 @@ set ts=4
 set expandtab
 
 " taglist.....ctags -R
-set tags=tags
+" In the current directory can not find the tags file to the upper directory to find
+set tags=tags;/
 set autochdir
 
 let Tlist_Show_One_File=1
@@ -26,10 +27,10 @@ let Tlist_Exit_OnlyWindow=1
 
 " winmanager
 let g:winManagerWindowLayout='FileExplorer|TagList'
-nmap wm :WMToggle<cr>
+nmap wm :WMToggle<CR>
 
 " a.vim
-nnoremap <silent> <F12> :A<CR>
+nnoremap <silent> <F4> :A<CR>
 
 " grep.vim
 nnoremap <silent> <F3> :Grep<CR>

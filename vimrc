@@ -74,7 +74,8 @@ set ts=4
 set cindent "C style indent
 
 " taglist.....ctags -R
-set tags=tags
+" In the current directory can not find the tags file to the upper directory to find
+set tags=tags;/
 " set autochdir
 
 let Tlist_Show_One_File=1
